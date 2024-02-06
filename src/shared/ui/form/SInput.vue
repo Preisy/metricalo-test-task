@@ -5,11 +5,8 @@ import { useField } from 'shared/lib/form';
 
 interface SInputProps extends Omit<QInputProps, 'modelValue'> {
   name: string
-  sRequired?: boolean
 }
-const props = withDefaults(defineProps<SInputProps>(), {
-  sRequired: false,
-})
+const props = defineProps<SInputProps>()
 
 const { errorMessage, value } = useField<string | number | undefined>(props.name)
 </script>
@@ -22,7 +19,6 @@ const { errorMessage, value } = useField<string | number | undefined>(props.name
     :error-message="errorMessage"
     outlined
     class="s-input text-md [&_.q-field\_\_bottom]:pt-3px"
-    :class="{ 'q-field--required': sRequired }"
   />
 </template>
 

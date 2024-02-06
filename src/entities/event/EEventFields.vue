@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SInput } from 'shared/ui/form';
+import { SDatePicker } from 'shared/ui/form';
 
 defineProps<{
   edit?: boolean
@@ -14,7 +15,7 @@ defineProps<{
   <s-input name="organization" label="organization"/>
   <s-input name="country" label="country"/>
   <s-input v-if="!edit" name="eventName" label="eventName"/>
-  <s-input name="date" label="date"/>
+  <s-date-picker name="date" label="date"/>
   <s-input name="text" label="text"/>
 </template>
 
