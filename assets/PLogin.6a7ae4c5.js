@@ -1,0 +1,1 @@
+import{_ as o}from"./WLogin.b89306d0.js";import{d as e,p as r,q as t,u as a}from"./index.6bc8d3c9.js";import"./SBtn.36cdd4c4.js";import"./use-prevent-scroll.b2282626.js";const f=e({__name:"PLogin",setup(n){return(p,s)=>(r(),t(a(o)))}});export{f as default};
