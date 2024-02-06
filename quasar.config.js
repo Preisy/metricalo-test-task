@@ -56,6 +56,8 @@ module.exports = configure(function (/* ctx */) {
       },
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
+      publicPath: 'metricalo-test-task',
+
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
