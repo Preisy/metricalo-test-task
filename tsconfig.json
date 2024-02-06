@@ -1,0 +1,29 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "incremental": true,
+    "baseUrl": ".",
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "target": "ES2021",
+    "sourceMap": true,
+    "lib": ["es2021"],
+    "esModuleInterop": true,
+    "alwaysStrict": true,
+    "allowJs": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "processes/*": ["src/processes/*"],
+      "pages/*": ["src/pages/*"],
+      "widgets/*": ["src/widgets/*"],
+      "features/*": ["src/features/*"],
+      "entities/*": ["src/entities/*"],
+      "shared/*": ["src/shared/*"]
+    }
+  }
+}
