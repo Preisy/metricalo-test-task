@@ -1,0 +1,1 @@
+import{a as e}from"./WLogin.b1c7392a.js";import{d as o,p as r,q as a,u as t}from"./index.83afc711.js";import"./SBtn.1b89a137.js";import"./use-prevent-scroll.94b144cc.js";const f=o({__name:"PSignup",setup(n){return(p,s)=>(r(),a(t(e)))}});export{f as default};
