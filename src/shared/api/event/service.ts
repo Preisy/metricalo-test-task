@@ -35,11 +35,25 @@ export class EventService {
     return doc(this.db, docRef.path)
   }
 
-  private async fetchListData(req: TableEvent.List.Req) {
+  // crutch. thank you firebase
+  private async getPositionByOffset(offset: number) {
     const q = query(
       this.collectionRef,
       orderBy('position', 'asc'),
-      startAt((req.page - 1) * req.rowsPerPage + 1),
+      limit(offset),
+    )
+    const querySnapshot = await getDocs(q)
+    const lastEl = querySnapshot.docs[querySnapshot.docs.length - 1]
+    const position = lastEl.data().position
+    return position
+  }
+
+  private async fetchListData(req: TableEvent.List.Req) {
+    const startPosition = await this.getPositionByOffset((req.page - 1) * req.rowsPerPage + 1)
+    const q = query(
+      this.collectionRef,
+      orderBy('position', 'asc'),
+      startAt(startPosition),
       limit(req.rowsPerPage),
     )
 
